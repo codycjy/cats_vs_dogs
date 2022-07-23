@@ -21,8 +21,9 @@ learning_rate = 0.0001  # 学习率，一般小于0.0001
 
 # train_dir = 'D:/WorkSpace/Dataset/cats_vs_dogs/data/train/'        # 训练集的文件夹路径
 # logs_train_dir = 'D:/WorkSpace/work_to_pycharm/cats_vs_dogs/log/'  # 记录训练过程与保存模型的路径
-train_dir = '/home/user/Dataset/cats_vs_dogs/train/'                 # 训练集的文件夹路径
-logs_train_dir = '/home/dujunjie/PycharmProjects/cats_vs_dogs/log/'  # 记录训练过程与保存模型的路径
+root_dir='/content/cats_vs_dogs/'
+train_dir = root_dir + 'train/'                 # 训练集的文件夹路径
+logs_train_dir = root_dir + 'log/'  # 记录训练过程与保存模型的路径
 
 # 获取要训练的图片和对应的图片标签, 这里返回的train_img是存放猫狗图片路径的列表，train_label是存放对train对应标签的列表(0是猫，1是狗)
 train_img, train_label = input_data.get_files(train_dir)
